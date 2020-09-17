@@ -13,6 +13,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.guilherme.dspesquisa.entities.enums.Platform;
 
 @Entity
@@ -26,6 +27,7 @@ public class Game implements Serializable{
 	private long id;
 	private String title;
 	private Platform platform;
+	
 	
 	@ManyToOne
 	@JoinColumn(name = "genre_id")
